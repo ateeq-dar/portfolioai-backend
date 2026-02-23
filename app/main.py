@@ -16,7 +16,10 @@ app = FastAPI()
 init_db()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://ateeqportfolioai.netlify.app/"],  # frontend URL
+    allow_origins=[
+        "http://localhost:5173",
+        "https://ateeqportfolioai.netlify.app/"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
