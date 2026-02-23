@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: portfolio-backend
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port 10000"
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
