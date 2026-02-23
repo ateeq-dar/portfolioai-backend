@@ -6,11 +6,14 @@ import requests
 import os
 from dotenv import load_dotenv
 from fastapi.middleware.cors import CORSMiddleware
+from app.database import init_db
+
 
 
 load_dotenv()
 
 app = FastAPI()
+init_db()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://ateeqportfolioai.netlify.app/"],  # frontend URL
