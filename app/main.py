@@ -98,9 +98,9 @@ Question:
 
         return {"answer": answer}
 
-  except Exception as e:
-    print("CHAT ERROR:", e)
-    return {"answer": "Something went wrong. Please try again later."}
+    except Exception as e:
+        print("CHAT ERROR:", e)
+        return {"answer": "Something went wrong. Please try again later."}
 
     finally:
         db.close()
