@@ -98,8 +98,8 @@ Question:
 
         return {"answer": answer}
 
-    except Exception as e:
-        return {"answer": "Something went wrong. Please try again later."}
+   except Exception as e:
+    return {"answer": f"DEBUG ERROR: {str(e)}"}
 
     finally:
         db.close()
